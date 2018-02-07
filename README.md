@@ -1,2 +1,5 @@
-# vscode-planning-syntax
-A Visual Studio Code extension to support color in text file `(*.pln)`  to organize Epic, Backlog, Sprint, Story, Task.
+# Visual Studio Code Extension - Planning Syntax Language
+
+## Overview
+
+See sub folder completions-sample or [README](completions-sample/README.md) file.
