@@ -5,6 +5,8 @@
 A Visual Studio Code extension to support intellisense and color in text file `(*.pln)` 
 to organize Epic, Backlog, Sprint, Story, Task.
 
+![example](images/sample.00.png "example")
+
 ## Snippet Code
 
 * Keyword: 
@@ -24,9 +26,7 @@ to organize Epic, Backlog, Sprint, Story, Task.
 * MIT License
 * (C) Frederic Torres 2018
 
-![example](images/sample.00.png "example")
 
-[Example](images/sample.00.png)  
 
 ## License and Copyright
 
