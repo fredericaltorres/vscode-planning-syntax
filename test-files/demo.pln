@@ -14,16 +14,16 @@ Sprint:
             Tester: Charlie
 
 Sprint:
-    StartDate: Feb 4, 2018, 10:47:47 PM
-    EndDate: Feb 4, 2018, 10:47:47 PM
+    StartDate: Feb 6, 2018, 7:48:53 PM
+    EndDate: Feb 6, 2018, 7:48:53 PM
     Team: Blue Team
 
     Story: As a user...
-        LastModified: Feb 4, 2018, 10:47:55 PM        
-        Status: New 
+        LastModified: Feb 6, 2018, 7:48:59 PM        
+        Status: InProgress
 
         Task: Description...
-            LastModified: Feb 4, 2018, 10:48:00 PM
-            Status: New
-            Developer:
-            Tester: 
+            LastModified: Feb 6, 2018, 7:49:06 PM
+            Status: InProgress
+            Developer: George
+            Tester: Bill

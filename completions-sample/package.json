@@ -1,11 +1,11 @@
 {
     "name": "planning-intellisense-extension",
     "displayName": "Planning Intellisense Extension",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "publisher": "fredericaltorres",
     "repository": {
         "type": "git",
-        "url": "http://frederictorresmvc2015.azurewebsites.net"
+        "url": "https://github.com/fredericaltorres/vscode-planning-syntax"
     },
     "homepage": "./README.md",
     "icon": "images/logo.png",
@@ -14,7 +14,7 @@
         "theme": "dark"
     },
     "bugs": {
-        "url": "http://frederictorresmvc2015.azurewebsites.net"
+        "url": "https://github.com/fredericaltorres/vscode-planning-syntax"
     },
     "engines": {
         "vscode": "^1.18.0"
