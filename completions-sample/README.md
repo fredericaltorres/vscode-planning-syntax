@@ -24,9 +24,9 @@ to organize Epic, Backlog, Sprint, Story, Task.
 * MIT License
 * (C) Frederic Torres 2018
 
-![example](https://raw.githubusercontent.com/fredericaltorres/vscode-planning-color-coding/master/images/sample.00.png "example")
+![example](images/sample.00.png "example")
 
-[Example](https://raw.githubusercontent.com/fredericaltorres/vscode-planning-color-coding/master/images/sample.00.png)    
+[Example](images/sample.00.png)  
 
 ## License and Copyright
 
