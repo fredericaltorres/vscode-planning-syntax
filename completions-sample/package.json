@@ -7,7 +7,7 @@
         "type": "git",
         "url": "https://github.com/fredericaltorres/vscode-planning-syntax"
     },
-    "homepage": "./README.md",
+    "homepage": "file://./README.md",
     "icon": "images/logo.png",
     "galleryBanner": {
         "color": "#96DFFF",

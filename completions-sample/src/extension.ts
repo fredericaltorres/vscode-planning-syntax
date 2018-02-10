@@ -30,21 +30,17 @@ let _intellisenseDefinition = new IntellisenseDefinition();
  * @return to complete.
  */
 export function activate(context: vscode.ExtensionContext) {
-
 	try {
 		vscode.languages.registerCompletionItemProvider('plaintext', {
-			provideCompletionItems(
-				document: vscode.TextDocument,
-				position: vscode.Position,
-				token: vscode.CancellationToken,
-				context: vscode.CompletionContext) {
+			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position,
+				token: vscode.CancellationToken, context: vscode.CompletionContext) {
 
 				return _intellisenseDefinition.IntellisenseMaker();
 			}
 		});
 	}
 	catch (ex) {
-		this.error(`extensions::activate() ex:${ex}`);
+		this.error("extensions::activate() ex:" + ex);
 	}
 }
 
