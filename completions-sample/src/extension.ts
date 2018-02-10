@@ -31,17 +31,22 @@ let _intellisenseDefinition = new IntellisenseDefinition();
  */
 export function activate(context: vscode.ExtensionContext) {
 	try {
+		console.log("Activating.start");
 		vscode.languages.registerCompletionItemProvider('plaintext', {
-			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position,
-				token: vscode.CancellationToken, context: vscode.CompletionContext) {
 
-				return _intellisenseDefinition.IntellisenseMaker();
+			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
+
+				console.log("provideCompletionItems.start");
+				let i = _intellisenseDefinition.IntellisenseMaker();
+				console.log("provideCompletionItems.end");
+				return i;
 			}
 		});
 	}
 	catch (ex) {
-		this.error("extensions::activate() ex:" + ex);
+		console.error("extensions::activate() ex:" + ex);
 	}
+	console.log("Activating.end");
 }
 
 // Read more here:

@@ -5,6 +5,10 @@
 A Visual Studio Code extension to support intellisense and color in text file `(*.pln)` 
 to organize Epic, Backlog, Sprint, Story, Task.
 
+## Push to github
+
+git push origin master
+
 ## Deployment
 
 https://code.visualstudio.com/docs/extensions/publish-extension
