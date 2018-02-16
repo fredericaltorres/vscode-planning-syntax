@@ -3,16 +3,22 @@
     "displayName": "Planning Intellisense Extension",
     "version": "0.10.0",
     "publisher": "fredericaltorres",
+	"author": {
+        "name": "frederic torres",
+        "email": "FredericALTorres@gmail.com",
+        "url": "http://www.FredericTorres.com"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/fredericaltorres/vscode-planning-syntax"
     },
-    "homepage": "file://./README.md",
+    "homepage": "https://github.com/fredericaltorres/vscode-planning-syntax/blob/master/README.md",
     "icon": "images/logo.png",
     "galleryBanner": {
         "color": "#96DFFF",
         "theme": "dark"
     },
+    "license": "SEE LICENSE IN LICENSE.txt",
     "bugs": {
         "url": "https://github.com/fredericaltorres/vscode-planning-syntax"
     },

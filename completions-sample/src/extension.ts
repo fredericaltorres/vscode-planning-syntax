@@ -19,7 +19,7 @@ import { Tracer } from "./lib/Tracer";
 import { IntellisenseDefinition } from "./IntellisenseDefinition";
 
 /**
- * A singleton of class IntellisenseDefinition, used every time the extrension
+ * A singleton of class IntellisenseDefinition, used every time the extension
  * intellisense is triggered
  */
 let _intellisenseDefinition = new IntellisenseDefinition();
