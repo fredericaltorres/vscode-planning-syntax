@@ -2,10 +2,9 @@
 
 ## Overview
 
-A Visual Studio Code extension to support intellisense and color in text file `(*.pln)` 
-to organize Epic, Backlog, Sprint, Story, Task.
+A Visual Studio Code extension to support color coding `.pln` text file to organize Epic, Backlog, Sprint, Story, Task.
 
-![example](images/sample.00.png "example")
+![example](./images/sample.00.png "example")
 
 ## Snippet Code
 
