@@ -9,12 +9,12 @@
 
 function getDeveloper() {
     return [
-        "Paul", "John", "George", "Richard"
+        "Paul M", "John L", "George H", "Richard S", "Toni Visconti"
     ];
 }
 function getTester() {
     return [
-        "Mike", "Charlie", "Bill", "Ron", "Keith"
+        "Mike J", "Charlie W", "Bill W", "Ron W", "Keith R", "Mick Ronson"
     ];
 }
 function getTeam() {
