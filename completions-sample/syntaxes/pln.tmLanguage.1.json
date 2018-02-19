@@ -1,0 +1,54 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "pln",
+	"patterns": [
+		{ "include": "#keywords" },
+		{ "include": "#date" }
+	],
+	"repository": {
+
+		"keywords": {
+			"patterns": [
+				{
+					"name": "meta.selector.pln",
+					"match": "(:New)|(:InProgress)|(:Blocked)|(:ReadyForQA)|(:Done)"
+				}, 
+				{
+					"name": "comment.pln",
+					"match": "(^#.*)|(\/\/.*)"
+				}, 
+				{
+					"name": "markup.bold.pln",
+					"match": "(Backlog:)|(Sprint:)|(Story:)|(Task:)|(APT-[0-9]{1,4}):"
+				},
+				{
+					"name": "markup.deleted.pln",
+					"match": "(Zizi)|(Tasky:.*)"
+				},
+				{
+					"name": "entity.other.attribute-name.pln",
+					"match": "(Description:)|(StartDate:)|(EndDate:)|(Team:)|(LastModified:)|(Status:)|(Developer:)|(Tester:)"
+				},
+				{
+					"name": "punctuation.definition.tag.pln",
+					"match": "([a-zA-Z]{3} [0-9]{1}, [0-9]{4})|([0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}) (PM|AM)"
+				}
+			]
+		},
+		"date": {
+			"patterns": [{
+					"match": "([0-9]{4}-[0-9]{2}-[0-9]{2})( - )([0-9]{2}:[0-9]{2}:[0-9]{2})",
+					"captures": {
+						"1": {
+							"name": "markup.changed.pln"
+						},
+						"3": {
+							"name": "markup.changed.pln"
+						}
+					}
+				}
+			]
+		}
+	},
+	"scopeName": "source.pln"
+}

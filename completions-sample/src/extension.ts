@@ -17,6 +17,12 @@ import { connect } from 'tls';
 import { POINT_CONVERSION_COMPRESSED } from 'constants';
 import { Tracer } from "./lib/Tracer";
 import { IntellisenseDefinition } from "./IntellisenseDefinition";
+import { HoverManager } from "./HoverManager";
+
+/**
+ *
+ */
+let _hoverManager = new HoverManager();
 
 /**
  * A singleton of class IntellisenseDefinition, used every time the extension
@@ -30,9 +36,22 @@ let _intellisenseDefinition = new IntellisenseDefinition();
  * @return to complete.
  */
 export function activate(context: vscode.ExtensionContext) {
+
+	try {
+		let csv_provider = vscode.languages.registerHoverProvider('pln', {
+			provideHover(document, position, token) {
+				return new vscode.Hover(_hoverManager.ComputeHOverText(document, position, token));
+			}
+		});
+		context.subscriptions.push(csv_provider);
+	}
+	catch (ex) {
+		console.error("extensions::activate() ex:" + ex);
+	}
+
 	try {
 		console.log("Activating.start");
-		vscode.languages.registerCompletionItemProvider('plaintext', {
+		vscode.languages.registerCompletionItemProvider('pln'/*'plaintext'*/, {
 
 			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
 

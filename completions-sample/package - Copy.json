@@ -30,7 +30,8 @@
         "Languages"
     ],
     "activationEvents": [
-        "onLanguage:pln"
+        "*",
+        "onLanguage:csv"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -40,13 +41,6 @@
                 "extensions": [
                     ".pln"
                 ]
-            }
-        ],
-        "grammars": [
-            {
-                "language": "pln",
-                "scopeName": "source.pln",
-                "path": "./syntaxes/pln.tmLanguage.json"
             }
         ]
     },
