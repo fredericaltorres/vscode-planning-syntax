@@ -34,15 +34,14 @@ module.exports = [
     Team: `
     },
     {
-        Name: "Story",
+        Name: "_Story",
         Inserted: `Story: As a user...
     LastModified: [LastModified]        
     Status: New `
     },
     {
         Name: "GetSample",
-        Inserted: "${1||}",
-        Values: funcs.getSample(),
+        Inserted: funcs.getSample()
     },
     {
         Name: "Status",

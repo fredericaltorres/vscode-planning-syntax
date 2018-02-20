@@ -136,9 +136,7 @@ export class IntellisenseDefinition extends Tracer {
 			if (values.length === 1 && values[0] === "#16DayList")
 				values = __util.Date.getListOfDay(new Date(), 16).map(e => __util.String.replaceAll(e, ", ", " "));
 			else if (values.length === 1 && values[0] === "#Now")
-				//values[0] = __util.String.replaceAll(__util.Date.formatLong(new Date()), ", ", " ");
 				values[0] = __util.String.replaceAll(__util.Date.formatDay(new Date()), ", ", " ");
-
 			inserted = this.processInsertSubCodeSnippet(this.processMacros(def.Inserted)).replace(tag, `|${values.join(',')}|`);
 		}
 		else {

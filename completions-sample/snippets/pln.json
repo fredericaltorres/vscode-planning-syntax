@@ -76,6 +76,15 @@
         ],
         "description": "Else statement"
     },
+    "Story": {
+        "prefix": "story",
+        "body": [
+            "Story: ${1:Description}",
+            "LastModified: [LastModified]",
+            "Status: $0"
+        ],
+        "description": "Enum"
+    },
     "Enum": {
         "prefix": "enum",
         "body": [
