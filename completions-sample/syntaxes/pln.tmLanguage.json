@@ -14,7 +14,7 @@
 			"patterns": [
 				{
 					"name": "meta.selector.pln",
-					"begin": "{",
+					"begin": "function{",
 					"end": "}",
 					"patterns": [
 						{
@@ -33,7 +33,7 @@
 				},
 				{
 					"name": "comment.pln",
-					"match": "(^#.*)|(\/\/.*)"
+					"match": "(#.*)|(\/\/.*)"
 				},
 				{
 					"name": "markup.bold.pln",

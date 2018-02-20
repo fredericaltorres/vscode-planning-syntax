@@ -1,4 +1,13 @@
 {
+    "Story": {
+        "prefix": "story",
+        "description": "story",
+        "body": [
+            "Story: ${1:Description}",
+            "LastModified: [LastModified]",
+            "Status: $0"
+        ]
+    },
     "Attribute using recommended pattern": {
         "prefix": "attribute",
         "body": [
@@ -75,16 +84,8 @@
             "}"
         ],
         "description": "Else statement"
-    },
-    "Story": {
-        "prefix": "story",
-        "body": [
-            "Story: ${1:Description}",
-            "LastModified: [LastModified]",
-            "Status: $0"
-        ],
-        "description": "Enum"
-    },
+    }
+  
     "Enum": {
         "prefix": "enum",
         "body": [

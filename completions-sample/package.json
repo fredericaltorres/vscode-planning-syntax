@@ -34,7 +34,7 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "snippets": [
+        "snippets____": [
             {
                 "language": "pln",
                 "path": "./snippets/pln.json"
