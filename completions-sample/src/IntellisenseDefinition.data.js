@@ -40,6 +40,11 @@ module.exports = [
     Status: New `
     },
     {
+        Name: "GetSample",
+        Inserted: "${1||}",
+        Values: funcs.getSample(),
+    },
+    {
         Name: "Status",
         Inserted: "${1||}",
         Values: funcs.getStatus(),

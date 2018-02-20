@@ -1,29 +1,41 @@
+# Comment
 Sprint:
-    StartDate: Feb 4, 2018, 10:48:43 PM
-    EndDate: Feb 4, 2018, 10:48:43 PM
+    StartDate: Feb 15 2018 10:47:36 PM
+    EndDate: Feb 25 2018 10:47:36 PM
     Team: Blue Team
 
-    Story: As a user...
-        LastModified: Feb 4, 2018, 10:48:52 PM        
-        Status: New 
-
+    Story: As a user I want to...
+        LastModified: Feb 15 2018 10:47:42 PM
+        Status: InProgress
         Task: Description...
-            LastModified: Feb 4, 2018, 10:49:04 PM
+            LastModified: Feb 15 2018 10:47:45 PM
             Status: InProgress
-            Developer: John
-            Tester: Bill
+            Developer: Mick Ronson
+            Tester: Toni Visconti
+        Task: Description...
+            LastModified: Feb 19 2018 5:54:17 PM
+            Status: New
+            Developer: Mick Ronson
+            Tester: Toni Visconti
 
-Sprint:
-    StartDate: Feb 12, 2018, 3:40:04 PM
-    EndDate: Feb 12, 2018, 3:40:04 PM
-    Team:             
+    Story: As a user I want to...
+        LastModified: Feb 15 2018 10:47:2 PM
+        Status: Blocked
+        Task: Description...
+            LastModified: Feb 15 2018 10:7:45 PM
+            Status: InProgress
+            Developer: Mick Ronson
+            Tester: Toni Visconti
 
-Story: As a user...
-    LastModified: Feb 10, 2018, 12:31:06 AM        
-    Status: New 
-    Task: Description...
-        LastModified: Feb 10, 2018, 12:31:09 AM
-        Status: New
-        Developer: George
-        Tester: Ron
+# ------------------------------------------------------------------------------------------------
+# Date Format Supported
+# ------------------------------------------------------------------------------------------------
+08:04:09
+08:04:09 AM
+08:24:09 PM
 
+2018/10/10
+Feb 19 2018
+2018/10/10 08:24:09 PM
+Feb 19 2018 08:24:09 PM
+Feb 9 18 08:24:16 PM

@@ -2,11 +2,14 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "pln",
 	"patterns": [
-		{ "include": "#keywords" },
-		{ "include": "#date" }
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#date"
+		}
 	],
 	"repository": {
-
 		"keywords": {
 			"patterns": [
 				{
@@ -14,22 +17,24 @@
 					"begin": "{",
 					"end": "}",
 					"patterns": [
-						{  "name":"markup.bold.pln",
+						{
+							"name": "markup.bold.pln",
 							"match": "(\\.)|(\\[)|(\\])|(\\()|(\\))|(\\:)|(=)"
 						},
-						{  "name":"comment.pln",
+						{
+							"name": "comment.pln",
 							"match": "."
 						}
 					]
-				}, 
+				},
 				{
 					"name": "meta.selector.pln",
 					"match": "(:New)|(:InProgress)|(:Blocked)|(:ReadyForQA)|(:Done)"
-				}, 
+				},
 				{
 					"name": "comment.pln",
 					"match": "(^#.*)|(\/\/.*)"
-				}, 
+				},
 				{
 					"name": "markup.bold.pln",
 					"match": "(Backlog:)|(Sprint:)|(Story:)|(Task:)|(APT-[0-9]{1,4}):"
@@ -45,34 +50,57 @@
 				{
 					"match": "(Status:)( *)(\\w*)",
 					"captures": {
-						"1": { "name": "entity.other.attribute-name.pln" },
-						"3": { "name": "meta.selector.pln" }
+						"1": {
+							"name": "entity.other.attribute-name.pln"
+						},
+						"3": {
+							"name": "meta.selector.pln"
+						}
 					}
 				},
 				{
 					"match": "(Developer:|Team:|Tester:)( *)(.*)",
 					"captures": {
-						"1": { "name": "entity.other.attribute-name.pln" },
-						"3": { "name": "markup.deleted.pln" }
-					}
-				},
-				{
-					"match": "([a-zA-Z]{3} [0-9]{2}, [0-9]{4}, )([0-9]{2}:[0-9]{2}:[0-9]{2})( AM| PM|)",
-					"captures": {
-						"1": { "name": "markup.deleted.pln" },
-						"2": { "name": "meta.selector.pln" },
-						"3": { "name": "meta.selector.pln" }
+						"1": {
+							"name": "entity.other.attribute-name.pln"
+						},
+						"3": {
+							"name": "markup.deleted.pln"
+						}
 					}
 				}
 			]
 		},
 		"date": {
-			"patterns": [{
-					"match": "([0-9]{4}-[0-9]{2}-[0-9]{2})( - )([0-9]{2}:[0-9]{2}:[0-9]{2})",
+			"patterns": [
+				{
+					"_data_": "00:00:00, 0:0:0, 00:00:00 AM",
+					"match": "([0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2})( AM| PM|)",
 					"captures": {
-						"1": { "name": "markup.changed.pln" },
-						"2": { "name": "comment.pln" },
-						"3": { "name": "markup.deleted.pln" }
+						"1": {
+							"name": "meta.selector.pln"
+						},
+						"2": {
+							"name": "meta.selector.pln"
+						}
+					}
+				},
+				{
+					"_data_": "Feb 15 2018, Feb 15 18",
+					"match": "([a-zA-Z]{3} [0-9]{1,2} [0-9]{2,4})",
+					"captures": {
+						"1": {
+							"name": "markup.deleted.pln"
+						}
+					}
+				},
+				{
+					"_data_": "2018/01/01",
+					"match": "([0-9]{2,4}\/[0-9]{2,2}\/[0-9]{2,2})",
+					"captures": {
+						"1": {
+							"name": "markup.deleted.pln"
+						}
 					}
 				}
 			]

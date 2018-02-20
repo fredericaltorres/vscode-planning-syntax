@@ -21,25 +21,31 @@ class StringClass {
 class DateClass {
 
 	public static defaultCulture: string = "en-us";
-	public static defaultOptions: object = { weekday: "short", year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" };
+	public static defaultOptions: object = {
+		//weekday: "long",
+		year: "numeric", month: "short", day: "numeric",
+		hour: "numeric", minute: "numeric", second: "numeric"
+		//hour: "2-digit", minute: "2-digit", second: "2-digit"
+	};
 
 	public AddDays(d: Date, days: number): Date {
 		let date2 = new Date(d);
 		return new Date(date2.setTime(date2.getTime() + days * 86400000));
 	}
-	public formatLong(date: Date, culture: string = DateClass.defaultCulture, options: object = DateClass.defaultOptions): string {
-		return this.format(date, culture, options);
-	}
-	// No week day
-	public formatShort(date: Date, culture: string = DateClass.defaultCulture, options: object = { year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" }): string {
-		return this.format(date, culture, options);
-	}
+	// public formatLong(date: Date, culture: string = DateClass.defaultCulture, options: object = DateClass.defaultOptions): string {
+	// 	//return this.format(date, culture, options);
+	// 	return this.formatDay(date, culture, options);
+	// }
+	// // No week day
+	// public formatShort(date: Date, culture: string = DateClass.defaultCulture, options: object = { year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" }): string {
+	// 	return this.format(date, culture, options);
+	// }
 	public format(date: Date, culture: string, options: object): string {
-		return (date).toLocaleTimeString(culture, options);
+		return date.toLocaleTimeString(culture, options);
 	}
 	// Just 
 	public formatDay(date: Date, culture: string = DateClass.defaultCulture, options: object = DateClass.defaultOptions): string {
-		return (date).toLocaleDateString(culture, options);
+		return date.toLocaleDateString(culture, options);
 	}
 	public ____________formatDay(date: Date, showWeekDay: boolean = false): string {
 		let d = new Date(date),

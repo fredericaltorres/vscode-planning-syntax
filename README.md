@@ -8,7 +8,7 @@ A Visual Studio Code extension to support color coding `.pln` text file to organ
 
 ## Snippet Code
 
-* Keyword: 
+* Keyword:
     * Epic
     * Backlog
     * Sprint

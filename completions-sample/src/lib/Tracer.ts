@@ -30,7 +30,7 @@ export class Tracer {
 		return this._getName;
 	};
 	private getTraceInfo(): string {
-		return `[${Tracer._utilSingletonInstance.Date.formatLong(new Date())}, ${this.getName()}]`;
+		return `[${Tracer._utilSingletonInstance.Date.formatDay(new Date())}, ${this.getName()}]`;
 	}
 	public log(m: string): void {
 		this._tracerImpl.log(`${this.getTraceInfo()}${m}`);
