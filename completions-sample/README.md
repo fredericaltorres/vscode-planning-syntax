@@ -1,6 +1,6 @@
 # Visual Studio Code Extension - Planning Syntax Language
 
-## Overview
+## Overview.
 
 A Visual Studio Code extension to support color coding `.pln` text file to organize Epic, Backlog, Sprint, Story, Task.
 
