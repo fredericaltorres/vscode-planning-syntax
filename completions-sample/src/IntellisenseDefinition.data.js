@@ -7,6 +7,8 @@
 //import { getTeam, getStatus } from './IntellisenseDefinitionFunc';
 let funcs = require('./IntellisenseDefinition.func.js');
 
+const INSERTED_REPLACE_TAG = "${1||}";
+
 module.exports = [
     {
         Name: "Backlog",
@@ -34,9 +36,10 @@ module.exports = [
     Team: `
     },
     {
-        Name: "_Story",
+        Name: "Story",
         Inserted: `Story: As a user...
     LastModified: [LastModified]        
+    Point: 
     Status: New `
     },
     {
@@ -45,22 +48,27 @@ module.exports = [
     },
     {
         Name: "Status",
-        Inserted: "${1||}",
+        Inserted: INSERTED_REPLACE_TAG,
         Values: funcs.getStatus(),
     },
     {
+        Name: "Point",
+        Inserted: INSERTED_REPLACE_TAG,
+        Values: funcs.getPoint(),
+    },
+    {
         Name: "Team",
-        Inserted: "${1||}",
+        Inserted: INSERTED_REPLACE_TAG,
         Values: funcs.getTeam(),
     },
     {
         Name: "Developer",
-        Inserted: "${1||}",
+        Inserted: INSERTED_REPLACE_TAG,
         Values: funcs.getDeveloper(),
     },
     {
         Name: "Tester",
-        Inserted: "${1||}",
+        Inserted: INSERTED_REPLACE_TAG,
         Values: funcs.getTester(),
     },
     {
@@ -73,12 +81,12 @@ module.exports = [
     },
     {
         Name: "Now",
-        Inserted: "${1||}",
+        Inserted: INSERTED_REPLACE_TAG,
         Values: ["#Now"],
     },
     {
         Name: "Date",
-        Inserted: "${1||}",
+        Inserted: INSERTED_REPLACE_TAG,
         Values: ["#16DayList"],
     }
 ];

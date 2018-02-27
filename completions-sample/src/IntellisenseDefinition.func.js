@@ -7,14 +7,19 @@
    Function evaluate at start time
  */
 
+function getPoint() {
+    return [
+        1, 2, 3, 5, 8, 13, 21
+    ];
+}
 function getDeveloper() {
     return [
-        "Paul M", "John L", "George H", "Richard S", "Toni Visconti"
+        "Paul M", "John L", "George H", "Richard S", "Toni Visconti", "David B"
     ];
 }
 function getTester() {
     return [
-        "Mike J", "Charlie W", "Bill W", "Ron W", "Keith R", "Mick Ronson"
+        "Mike J", "Charlie W", "Bill W", "Ron W", "Keith R", "Mick Ronson", "Lou R"
     ];
 }
 function getTeam() {
@@ -64,4 +69,5 @@ module.exports = {
     getDeveloper,
     getTester,
     getSample,
+    getPoint,
 };

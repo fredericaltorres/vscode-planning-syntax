@@ -23,6 +23,9 @@ https://libraries.io/search?keywords=tokenizer&languages=TypeScript
 - https://github.com/rse/tokenizr
 */
 
+/**
+ * A string token
+ */
 class Token extends Tracer {
 	Type: string;
 	ColumStart: Number;
@@ -31,10 +34,9 @@ class Token extends Tracer {
 
 	private OrginalValue: any;
 
-	constructor(value: string, columStart: number) {
+	constructor(value: string, columStart: number, type: string = "string") {
 		super();
-		this.log("Token constructor");
-		this.Type = "string";
+		this.Type = type;
 		this.ColumStart = columStart;
 		this.ColumEnd = columStart + value.length;
 		this.OrginalValue = value;
@@ -42,13 +44,15 @@ class Token extends Tracer {
 	}
 };
 
+/**
+ * A string token
+ */
 export class Tokenizer extends Tracer {
 
 	Separators: string[] = [' ', ':'];
 
 	constructor() {
 		super();
-		this.log("Tokenize constructor");
 	}
 	process(text: string): Token[] {
 
@@ -74,7 +78,7 @@ export class Tokenizer extends Tracer {
 }
 
 /**
- *
+ * A simple tokenizer to implement intellisense and mouse hover
  */
 export class HoverManager extends Tracer {
 
@@ -86,18 +90,22 @@ export class HoverManager extends Tracer {
 		this._tokenizer = new Tokenizer();
 	}
 
+	/**
+	 *
+	 * @param The document
+	 * @param The cusor position
+	 * @param The cancellation token, if we want to cancel the Hover user action
+	 * @return a string to be displayed by vsCode on the piece of text
+	 */
 	ComputeHOverText(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken) {
 
 		var lnum = position.line;
 		var cnum = position.character;
 		var line = document.lineAt(lnum).text;
 
-		console.log(`[${lnum}/${cnum}]line:${line}`);
-		console.log(`token:${JSON.stringify(token)}`);
+		this.log(`[${lnum}/${cnum}]line:${line}`);
 
 		var tokens = this._tokenizer.process(line);
-
-		//this.log(JSON.stringify(tokens));
 
 		let result = "?";
 		if (tokens.length > 0) {
@@ -106,4 +114,3 @@ export class HoverManager extends Tracer {
 		return result;
 	}
 }
-

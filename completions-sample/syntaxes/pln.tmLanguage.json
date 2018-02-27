@@ -37,11 +37,7 @@
 				},
 				{
 					"name": "markup.bold.pln",
-					"match": "(Backlog:)|(Sprint:)|(Story:)|(Task:)|(APT-[0-9]{1,4}):"
-				},
-				{
-					"name": "markup.deleted.pln",
-					"match": "(Zozo)|(Tasky:.*)"
+					"match": "(Story:)|(Backlog:)|(Sprint:)|(Task:)|(APT-[0-9]{1,4}):"
 				},
 				{
 					"name": "entity.other.attribute-name.pln",
@@ -55,6 +51,20 @@
 						},
 						"3": {
 							"name": "meta.selector.pln"
+						}
+					}
+				},
+				{
+					"__match": "(Story:)(.*)(As a user)(.*)(so that)",
+					"__captures": {
+						"1": {
+							"name": "markup.bold.pln"
+						},
+						"3": {
+							"name": "meta.selector.pln"
+						},
+						"5": {
+							"name": "markup.deleted.pln"
 						}
 					}
 				},

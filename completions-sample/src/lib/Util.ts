@@ -79,8 +79,12 @@ export class Util {
 	constructor() {
 	}
 	public getConstructorName = function ($this): string {
-		var funcNameRegex = /function (.{1,})\(/;
-		var results = (funcNameRegex).exec(($this).constructor.toString());
+		let funcNameRegex = /function (.{1,})\(/;
+		let results = (funcNameRegex).exec(($this).constructor.toString());
+		if (results === null) {
+			funcNameRegex = /class *(\w*) /;
+			results = (funcNameRegex).exec(($this).constructor.toString());
+		}
 		let r = (results && results.length > 1) ? results[1] : "";
 		return r;
 	};

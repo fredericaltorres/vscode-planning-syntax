@@ -84,8 +84,7 @@
             "}"
         ],
         "description": "Else statement"
-    }
-  
+    },
     "Enum": {
         "prefix": "enum",
         "body": [
