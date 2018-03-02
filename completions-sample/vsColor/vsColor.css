@@ -1,0 +1,67 @@
+.header { color: #000080 }
+.comment { color: #7ca668 }
+.constant.language { color: #569cd6 }
+.constant.numeric { color: #b5cea8 }
+.constant.regexp { color: #b46695 }
+.constant.rgb-value { color: #d4d4d4 }
+.entity.name.tag { color: #569cd6 }
+.entity.name.selector { color: #d7ba7d }
+.entity.other.attribute-name { color: #9cdcfe }
+.entity.other.attribute-name.css { color: #d7ba7d }
+.invalid { color: #f44747 }
+.markup.underline { font-style: underline }
+.markup.bold { font-style: bold }
+.markup.heading { color: #6796e6 }
+.markup.italic { font-style: italic }
+.markup.inserted { color: #b5cea8 }
+.markup.deleted { color: #ce9178 }
+.markup.changed { color: #569cd6 }
+.meta.selector { color: #d7ba7d }
+.meta.tag { color: #808080 }
+.meta.preprocessor { color: #569cd6 }
+.meta.preprocessor.string { color: #ce9178 }
+.meta.preprocessor.numeric { color: #b5cea8 }
+.meta.structure.dictionary.key.python { color: #9cdcfe }
+.storage { color: #569cd6 }
+.storage.type { color: #569cd6 }
+.storage.modifier { color: #569cd6 }
+.string { color: #ce9178 }
+.string.tag { color: #ce9178 }
+.string.value { color: #ce9178 }
+.string.regexp { color: #d16969 }
+.support.type.property-name { color: #d4d4d4 }
+.keyword { color: #569cd6 }
+.keyword.control { color: #569cd6 }
+.keyword.control.less { color: #d7ba7d }
+.keyword.operator { color: #d4d4d4 }
+.keyword.operator.new { color: #569cd6 }
+.keyword.other.unit { color: #b5cea8 }
+.support.function.git-rebase { color: #d4d4d4 }
+.constant.sha.git-rebase { color: #b5cea8 }
+
+.meta.type.name
+.meta.return.type
+.meta.return-type
+.meta.cast
+.meta.type.annotation
+.support.type
+.entity.name.class
+.entity.name.type
+.storage.type.cs
+.storage.type.java { color: #4ec9b0 }
+
+.entity.name.function
+.entity.name.method { color: #dcdcaa }
+.keyword.control { color: #C586C0 }
+
+.meta.parameter.type.variable
+.variable.parameter
+.variable
+.variable.name { color: #9cdcfe }
+
+.keyword.control.import { color: #569CD6 }
+
+.support.property-value
+.constant.rgb-value
+.support.property-value.sass
+.constant.rgb-value.sass { color: #CE9178 }

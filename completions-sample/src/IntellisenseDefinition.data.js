@@ -37,10 +37,17 @@ module.exports = [
     },
     {
         Name: "Story",
-        Inserted: `Story: As a user...
-    LastModified: [LastModified]        
+        Inserted: `Story: Title
+    Description: As a user...
+    LastModified: [LastModified]
     Point: 
-    Status: New `
+    Status: New
+    Acceptance Criteria:
+        Scenario: User submits feedback form with the valid data
+            Given ...
+            When ...
+            Then ...
+    `
     },
     {
         Name: "GetSample",

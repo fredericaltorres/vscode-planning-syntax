@@ -31,3 +31,6 @@ fredericaltorres@live.com
 ## Files
 
     C:\DVT\JS\vsCode\Sprint.pln
+
+## Color Sample
+https://gist.github.com/sowderca/a3f56354b555e8c6622428387daad758    

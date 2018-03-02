@@ -1,41 +1,26 @@
-# Comment
+# My Sprint
+
 Sprint:
-    StartDate: Feb 15 2018 10:47:36 PM
-    EndDate: Feb 25 2018 10:47:36 PM
-    Team: Blue Team
+    StartDate: Mar 1 2018 9:31:09 PM
+    EndDate: Mar 1 2018 9:31:09 PM
+    Team: Red Team
 
-    Story: As a user I want to so that expectation
-        LastModified: Feb 15 2018 10:47:42 PM
-        Status: InProgress
-        Task: Description...
-            LastModified: Feb 15 2018 10:47:45 PM
-            Status: InProgress
-            Developer: Mick Ronson
-            Tester: Toni Visconti
-        Task: Description...
-            LastModified: Feb 19 2018 5:54:17 PM
-            Status: New
-            Developer: Mick Ronson
-            Tester: Toni Visconti
+    Story: Title
+        Description: As a user
+        LastModified: Mar 1 2018 9:31:15 PM
+        Point: 2
+        Status: New 
 
-    Story: As a user I want to...
-        LastModified: Feb 15 2018 10:47:2 PM
-        Status: Blocked
-        Task: Description...
-            LastModified: Feb 15 2018 10:7:45 PM
-            Status: InProgress
-            Developer: Mick Ronson
-            Tester: Toni Visconti
 
-# ------------------------------------------------------------------------------------------------
-# Date Format Supported
-# ------------------------------------------------------------------------------------------------
-08:04:09
-08:04:09 AM
-08:24:09 PM
-
-2018/10/10
-Feb 19 2018
-2018/10/10 08:24:09 PM
-Feb 19 2018 08:24:09 PM
-Feb 9 18 08:24:16 PM
+Story: Title
+    Description: As a user...
+    LastModified: Mar 1 2018 9:50:45 PM
+    Point: 
+    Status: New
+    Acceptance Criteria {
+        Scenario: User submits feedback form with the valid data
+            Given ...
+            When ...
+            Then ...
+    }
+    

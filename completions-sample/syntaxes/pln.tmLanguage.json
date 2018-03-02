@@ -28,6 +28,40 @@
 					]
 				},
 				{
+					"match": "(\\(|\\{|\\[)(.*)(:|<-|->|==|<=|=>)(.*)(\\}|\\]|\\))",
+					"captures": {
+						"1": {
+							"name": "entity.other.attribute-name.pln"
+						},
+						"2": {
+							"name": "comment.pln"
+						},
+						"3": {
+							"name": "markup.bold.pln"
+						},
+						"4": {
+							"name": "meta.selector.pln"
+						},
+						"5": {
+							"name": "entity.other.attribute-name.pln"
+						}
+					}
+				},
+				{
+					"match": "(\\[)(.*)(\\])",
+					"captures": {
+						"1": {
+							"name": "entity.other.attribute-name.pln"
+						},
+						"2": {
+							"name": "comment.pln"
+						},
+						"3": {
+							"name": "entity.other.attribute-name.pln"
+						}
+					}
+				},
+				{
 					"name": "meta.selector.pln",
 					"match": "(:New)|(:InProgress)|(:Blocked)|(:ReadyForQA)|(:Done)"
 				},
@@ -37,7 +71,18 @@
 				},
 				{
 					"name": "markup.bold.pln",
-					"match": "(Story:)|(Backlog:)|(Sprint:)|(Task:)|(APT-[0-9]{1,4}):"
+					"match": ""
+				},
+				{
+					"match": "(Backlog:|Sprint:|Task:|Story:)(.*)",
+					"captures": {
+						"1": {
+							"name": "markup.bold.pln"
+						},
+						"2": {
+							"name": "markup.inserted"
+						}
+					}
 				},
 				{
 					"name": "entity.other.attribute-name.pln",
@@ -55,20 +100,6 @@
 					}
 				},
 				{
-					"__match": "(Story:)(.*)(As a user)(.*)(so that)",
-					"__captures": {
-						"1": {
-							"name": "markup.bold.pln"
-						},
-						"3": {
-							"name": "meta.selector.pln"
-						},
-						"5": {
-							"name": "markup.deleted.pln"
-						}
-					}
-				},
-				{
 					"match": "(Developer:|Team:|Tester:)( *)(.*)",
 					"captures": {
 						"1": {
@@ -76,6 +107,32 @@
 						},
 						"3": {
 							"name": "markup.deleted.pln"
+						}
+					}
+				},
+				{
+					"match": "((?i)ZZZZZas a (?-i))(\\w*)(.*)((?i)I want to (?-i))(.*)((?i)so that (?-i))(.*)",
+					"captures": {
+						"1": {
+							"name": "entity.name.method"
+						},
+						"2": {
+							"name": "markup.deleted.pln"
+						},
+						"3": {
+							"name": "keyword.other.unit"
+						},
+						"4": {
+							"name": "entity.name.method"
+						},
+						"5": {
+							"name": "keyword.other.unit"
+						},
+						"6": {
+							"name": "entity.name.method"
+						},
+						"7": {
+							"name": "keyword.other.unit"
 						}
 					}
 				}
