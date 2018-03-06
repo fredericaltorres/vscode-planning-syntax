@@ -85,8 +85,15 @@
 					}
 				},
 				{
-					"name": "entity.other.attribute-name.pln",
-					"match": "(Description:)|(StartDate:)|(EndDate:)|(LastModified:)|(Point:)"
+					"match": "(Description:|StartDate:|EndDate:|LastModified:|Point:)(.*)",
+					"captures": {
+						"1": {
+							"name": "entity.other.attribute-name.pln"
+						},
+						"2": {
+							"name": "markup.inserted"
+						}
+					}
 				},
 				{
 					"match": "(Status:)( *)(\\w*)",

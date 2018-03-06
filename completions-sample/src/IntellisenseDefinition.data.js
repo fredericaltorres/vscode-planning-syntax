@@ -83,7 +83,7 @@ module.exports = [
         Inserted: `Task: Description...
     LastModified: [LastModified]
     Status: New
-    Developer:
+    Developer: 
     Tester: `
     },
     {

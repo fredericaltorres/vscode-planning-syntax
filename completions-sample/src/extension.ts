@@ -19,10 +19,8 @@ import { Tracer } from "./lib/Tracer";
 import { IntellisenseDefinition } from "./IntellisenseDefinition";
 import { HoverManager } from "./HoverManager";
 
-/**
- *
- */
-let _hoverManager = new HoverManager();
+
+let _tracer = new Tracer();
 
 /**
  * A singleton of class IntellisenseDefinition, used every time the extension
@@ -31,13 +29,15 @@ let _hoverManager = new HoverManager();
 let _intellisenseDefinition = new IntellisenseDefinition();
 
 /**
- *
- * @param context to complete.
- * @return to complete.
+ * Declare as global to run constructor only once at init time
  */
-export function activate(context: vscode.ExtensionContext) {
+let _hoverManager = null;
 
+function activateHoverProvider(context: vscode.ExtensionContext) {
 	try {
+		if (_hoverManager === null)
+			_hoverManager = new HoverManager();
+
 		let csv_provider = vscode.languages.registerHoverProvider('pln', {
 			provideHover(document, position, token) {
 				return new vscode.Hover(_hoverManager.ComputeHOverText(document, position, token));
@@ -46,11 +46,13 @@ export function activate(context: vscode.ExtensionContext) {
 		context.subscriptions.push(csv_provider);
 	}
 	catch (ex) {
-		console.error("extensions::activate() ex:" + ex);
+		_tracer.error("extensions::activate() ex:" + ex);
 	}
+}
 
+function activateCompletionItemProvider(context: vscode.ExtensionContext) {
 	try {
-		console.log("Activating.start");
+		_tracer.log("activateCompletionItemProvider() start");
 		vscode.languages.registerCompletionItemProvider('pln'/*'plaintext'*/, {
 
 			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
@@ -63,9 +65,18 @@ export function activate(context: vscode.ExtensionContext) {
 		});
 	}
 	catch (ex) {
-		console.error("extensions::activate() ex:" + ex);
+		_tracer.error("extensions::activate() ex:" + ex);
 	}
-	console.log("Activating.end");
+	_tracer.log("activateCompletionItemProvider() end");
+}
+/**
+ * @param context to complete.
+ * @return to complete.
+ */
+export function activate(context: vscode.ExtensionContext) {
+
+	activateHoverProvider(context);
+	activateCompletionItemProvider(context);
 }
 
 // Read more here:

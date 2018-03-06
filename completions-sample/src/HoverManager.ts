@@ -83,6 +83,7 @@ export class Tokenizer extends Tracer {
 export class HoverManager extends Tracer {
 
 	_tokenizer: Tokenizer;
+	_supportedWords: string[] = ['sprint', 'story', 'task'];
 
 	constructor() {
 		super();
@@ -107,9 +108,10 @@ export class HoverManager extends Tracer {
 
 		var tokens = this._tokenizer.process(line);
 
-		let result = "?";
+		let result = null;
 		if (tokens.length > 0) {
-			result = tokens[0].Value;
+			if (this._supportedWords.indexOf(tokens[0].Value.toString().toLocaleLowerCase()) !== -1)
+				result = `Is this ${tokens[0].Value} done?`;
 		}
 		return result;
 	}
