@@ -6,6 +6,7 @@ A Visual Studio Code extension to support color coding `.pln` text file to organ
 
 ![example](https://raw.githubusercontent.com/fredericaltorres/vscode-planning-syntax/master/completions-sample/images/sample.00.png)
 
+![example](./completions-sample/images/sample.00.png)
 ## Snippet Code
 
 * Keyword:
@@ -19,13 +20,6 @@ A Visual Studio Code extension to support color coding `.pln` text file to organ
     * developer
     * now
     * date
-
-## License and CopyRight
-
-* MIT License
-* (C) Frederic Torres 2018
-
-
 
 ## License and Copyright
 
