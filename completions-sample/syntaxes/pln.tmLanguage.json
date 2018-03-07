@@ -62,16 +62,8 @@
 					}
 				},
 				{
-					"name": "meta.selector.pln",
-					"match": "(:New)|(:InProgress)|(:Blocked)|(:ReadyForQA)|(:Done)"
-				},
-				{
 					"name": "comment.pln",
 					"match": "(#.*)|(\/\/.*)"
-				},
-				{
-					"name": "markup.bold.pln",
-					"match": ""
 				},
 				{
 					"match": "(Backlog:|Sprint:|Task:|Story:|Scenario:)(.*)",
