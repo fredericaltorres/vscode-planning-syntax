@@ -74,7 +74,7 @@
 					"match": ""
 				},
 				{
-					"match": "(Backlog:|Sprint:|Task:|Story:)(.*)",
+					"match": "(Backlog:|Sprint:|Task:|Story:|Scenario:)(.*)",
 					"captures": {
 						"1": {
 							"name": "markup.bold.pln"

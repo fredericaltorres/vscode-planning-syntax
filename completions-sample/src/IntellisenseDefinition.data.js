@@ -42,11 +42,6 @@ module.exports = [
     LastModified: [LastModified]
     Point: 
     Status: New
-    Acceptance Criteria:
-        Scenario: User submits feedback form with the valid data
-            Given ...
-            When ...
-            Then ...
     `
     },
     {
