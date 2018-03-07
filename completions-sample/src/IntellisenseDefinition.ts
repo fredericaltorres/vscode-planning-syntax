@@ -39,7 +39,9 @@ export class IntellisenseDefinition extends Tracer {
 	 *
 	 */
 	readonly IntellisenseDefinitionDataFileName = "../src/IntellisenseDefinition.data.js";
-
+	/**
+	 *
+	 */
 	constructor() {
 		super();
 		this.log("IntellisenseDefinition constructor");
@@ -69,7 +71,7 @@ export class IntellisenseDefinition extends Tracer {
 				this._intellisenseDefinitionType = require(this.IntellisenseDefinitionDataFileName);
 				this.warn(`Data count:${this._intellisenseDefinitionType.length}`);
 			}
-			else this.trace(`Loading pre-loaded data...`);
+			else this.trace(`Loading cached data...`);
 			return this._intellisenseDefinitionType;
 		}
 		catch (ex) {

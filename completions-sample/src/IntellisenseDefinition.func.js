@@ -34,33 +34,7 @@ function getStatus() {
 }
 function getSample() {
     return `# Comment
-Sprint:
-    StartDate: Feb 15 2018 10:47:36 PM
-    EndDate: Feb 25 2018 10:47:36 PM
-    Team: Blue Team
-
-    Story: As a user I want to...
-        LastModified: Feb 15 2018 10:47:42 PM
-        Status: InProgress
-        Task: Description...
-            LastModified: Feb 15 2018 10:47:45 PM
-            Status: InProgress
-            Developer: Mick Ronson
-            Tester: Toni Visconti
-        Task: Description...
-            LastModified: Feb 19 2018 5:54:17 PM
-            Status: New
-            Developer: Mick Ronson
-            Tester: Toni Visconti
-
-    Story: As a user I want to...
-        LastModified: Feb 15 2018 10:47:2 PM
-        Status: Blocked
-        Task: Description...
-            LastModified: Feb 15 2018 10:7:45 PM
-            Status: InProgress
-            Developer: Mick Ronson
-            Tester: Toni Visconti
+No Sample Defined    
 `;
 }
 module.exports = {

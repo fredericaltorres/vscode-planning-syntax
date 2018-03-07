@@ -4,7 +4,7 @@
    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
    Visual Studio Code Intellisense Definition for Planning Syntax (*.pln).
  */
-//import { getTeam, getStatus } from './IntellisenseDefinitionFunc';
+//import { funcs } from './IntellisenseDefinition.func.js';
 let funcs = require('./IntellisenseDefinition.func.js');
 
 const INSERTED_REPLACE_TAG = "${1||}";
