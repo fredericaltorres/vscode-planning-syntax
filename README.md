@@ -4,6 +4,8 @@
 
 A Visual Studio Code extension to support color coding `.pln` text file to organize Epic, Backlog, Sprint, Story, Tasks.
 
+[Video](https://www.youtube.com/watch?v=ZF-VShYtTcQ)
+
 ![example](https://raw.githubusercontent.com/fredericaltorres/vscode-planning-syntax/master/completions-sample/images/sample.00.png)
 
 ![example](./completions-sample/images/sample.00.png)
